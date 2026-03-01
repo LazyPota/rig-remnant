@@ -2,8 +2,8 @@
 extends Node
 
 # --- VARIABEL INTI ---
-var makanan: int = 55
-var material: int = 35
+var makanan: int = 150
+var material: int = 100
 var harapan: int = 70
 var populasi: int = 20
 var kepuasan_nelayan: int = 50
@@ -206,8 +206,8 @@ func show_game_over(victory: bool, message: String):
 
 func reset_game():
 	minggu_ke = 1
-	makanan = 10
-	material = 5
+	makanan = 150
+	material = 100
 	harapan = 50
 	populasi = 20
 	kepuasan_nelayan = 50

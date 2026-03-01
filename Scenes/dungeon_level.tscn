@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://blxsj5wwll63a"]
 
-[ext_resource type="Script" uid="uid://it6rg0cr2t6k" path="res://scripts/dungeon_manager.gd" id="1_manager"]
+[ext_resource type="Script" uid="uid://it6rg0cr2t6k" path="res://Scripts/dungeon_manager.gd" id="1_manager"]
 [ext_resource type="Texture2D" uid="uid://dmqanjolgsc80" path="res://Assets/dungeon asset/underwater-diving-files/code/media/background.png" id="2_dglbu"]
-[ext_resource type="Script" uid="uid://bxwvrcv6dghtr" path="res://scripts/dungeon_player.gd" id="3_player"]
-[ext_resource type="Texture2D" uid="uid://u24ptk8ibah2" path="res://assets/dungeon asset/underwater-diving-files/PNG/player/player-idle.png" id="4_player_idle"]
-[ext_resource type="AudioStream" uid="uid://cxfundf1fema6" path="res://assets/dungeon asset/underwater-diving-files/Sound/watery_cave.mp3" id="5_music"]
+[ext_resource type="Script" uid="uid://bxwvrcv6dghtr" path="res://Scripts/dungeon_player.gd" id="3_player"]
+[ext_resource type="Texture2D" uid="uid://u24ptk8ibah2" path="res://Assets/dungeon asset/underwater-diving-files/PNG/player/player-idle.png" id="4_player_idle"]
+[ext_resource type="AudioStream" uid="uid://cxfundf1fema6" path="res://Assets/dungeon asset/underwater-diving-files/Sound/watery_cave.mp3" id="5_music"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1"]
 radius = 20.0
