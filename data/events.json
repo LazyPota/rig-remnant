@@ -1,0 +1,114 @@
+[
+  {
+	"title": "Alokasi Daya Reaktor",
+	"description": "Reaktor utama hanya bisa menyuplai daya penuh ke satu proyek besar minggu ini. Para Pengrajin ingin menyalakannya untuk sonar laut dalam, sementara Nelayan butuh daya untuk pemurni air skala besar.",
+	"choices": [
+	  {
+		"text": "Prioritaskan Sonar Laut Dalam.",
+		"consequences": {
+		  "kepuasan_insinyur": 10,
+		  "kepuasan_nelayan": -10
+		}
+	  },
+	  {
+		"text": "Prioritaskan Pemurni Air.",
+		"consequences": {
+		  "kepuasan_nelayan": 10,
+		  "kepuasan_insinyur": -10
+		}
+	  }
+	]
+  },
+  {
+	"title": "Artefak Tersegel",
+	"description": "Tim ekspedisi membawa kembali sebuah kotak aneh dari reruntuhan. Terbuat dari bahan yang tidak dikenal, tertutup rapat, dan mengeluarkan dengungan pelan saat disentuh.",
+	"choices": [
+	  {
+		"text": "Buka Paksa Di Bengkel.",
+		"consequences": {
+		  "material": -5,
+		  "kepuasan_insinyur": 5
+		}
+	  },
+	  {
+		"text": "Buang Kembali ke Laut. Terlalu berbahaya.",
+		"consequences": {
+		  "kepuasan_nelayan": 5
+		}
+	  }
+	]
+  },
+  {
+	"title": "Kelahiran Pertama di Pangkalan",
+	"description": "Sebuah kabar gembira menyebar: seorang bayi lahir dengan selamat di klinik. Ini adalah kelahiran pertama di pangkalan dalam setahun, sebuah simbol harapan baru.",
+	"choices": [
+	  {
+		"text": "Adakan Perayaan Kecil untuk Semua.",
+		"consequences": {
+		  "makanan": -5,
+		  "harapan": 15
+		}
+	  },
+	  {
+		"text": "Berikan Jatah Ekstra Hanya untuk Keluarga Baru.",
+		"consequences": {
+		  "makanan": -2,
+		  "harapan": 5
+		}
+	  }
+	]
+  },
+  {
+	"title": "Sengketa Ruang Penyimpanan",
+	"description": "Ruang kargo terakhir yang layak pakai diperebutkan. Faksi Pengrajin ingin menggunakannya untuk menyimpan peralatan ekspedisi baru yang besar. Faksi Nelayan ingin mengubahnya menjadi gudang pengeringan ikan tambahan.",
+	"choices": [
+	  {
+		"text": "Berikan pada Tim Pengrajin.",
+		"consequences": {
+		  "kepuasan_insinyur": 5
+		}
+	  },
+	  {
+		"text": "Berikan pada Tim Nelayan.",
+		"consequences": {
+		  "kepuasan_nelayan": 5,
+		  "bonus_makanan_permanen": 2
+		}
+	  }
+	]
+  },
+  {
+	"title": "Sinyal Radio Aneh",
+	"description": "Operator radio menangkap sinyal SOS lemah yang berulang, berasal dari reruntuhan kota di sektor utara. Sinyal ini tidak sesuai dengan protokol standar kita. Bisa jadi penyintas lain, atau jebakan.",
+	"choices": [
+	  {
+		"text": "Kirim Tim Penyelamat Kecil.",
+		"consequences": {
+		  "chance_effects": [
+			{
+			  "chance": 0.5,
+			  "effects": {
+				"populasi": 5,
+				"harapan": 15
+			  }
+			},
+			{
+			  "chance": 0.5,
+			  "effects": {
+				"populasi": -2,
+				"harapan": -10
+			  }
+			}
+		  ]
+		}
+	  },
+	  {
+		"text": "Abaikan Sinyal. Terlalu Beresiko.",
+		"consequences": {
+		  "harapan": -5,
+		  "kepuasan_insinyur": -5
+		}
+	  }
+	]
+  }
+]

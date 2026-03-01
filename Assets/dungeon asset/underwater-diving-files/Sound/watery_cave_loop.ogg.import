@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cf7m6jh2slk00"
+path="res://.godot/imported/watery_cave_loop.ogg-babfd9017e975c32b2e696e6590af91b.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/dungeon asset/underwater-diving-files/Sound/watery_cave_loop.ogg"
+dest_files=["res://.godot/imported/watery_cave_loop.ogg-babfd9017e975c32b2e696e6590af91b.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

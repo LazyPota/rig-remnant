@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://blxsj5wwll63a"]
+
+[ext_resource type="Script" uid="uid://it6rg0cr2t6k" path="res://scripts/dungeon_manager.gd" id="1_manager"]
+[ext_resource type="Texture2D" uid="uid://dmqanjolgsc80" path="res://Assets/dungeon asset/underwater-diving-files/code/media/background.png" id="2_dglbu"]
+[ext_resource type="Script" uid="uid://bxwvrcv6dghtr" path="res://scripts/dungeon_player.gd" id="3_player"]
+[ext_resource type="Texture2D" uid="uid://u24ptk8ibah2" path="res://assets/dungeon asset/underwater-diving-files/PNG/player/player-idle.png" id="4_player_idle"]
+[ext_resource type="AudioStream" uid="uid://cxfundf1fema6" path="res://assets/dungeon asset/underwater-diving-files/Sound/watery_cave.mp3" id="5_music"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1"]
+radius = 20.0
+height = 60.0
+
+[sub_resource type="Theme" id="Theme_label"]
+default_font_size = 32
+
+[node name="DungeonLevel" type="Node2D" unique_id=563260686]
+script = ExtResource("1_manager")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1489551188]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1941681045]
+motion_mirroring = Vector2(1152, 0)
+
+[node name="BackgroundSprite" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1316912262]
+scale = Vector2(4.0625, 2.5507813)
+texture = ExtResource("2_dglbu")
+centered = false
+
+[node name="Player" type="Area2D" parent="." unique_id=822758226]
+position = Vector2(150, 324)
+script = ExtResource("3_player")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=742969470]
+texture = ExtResource("4_player_idle")
+hframes = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2077554055]
+shape = SubResource("CapsuleShape2D_1")
+
+[node name="InvincibilityTimer" type="Timer" parent="Player" unique_id=825339213]
+wait_time = 2.0
+one_shot = true
+
+[node name="FlashTimer" type="Timer" parent="Player" unique_id=1234891622]
+wait_time = 0.1
+
+[node name="Spawner" type="Node2D" parent="." unique_id=923769525]
+position = Vector2(1200, 0)
+
+[node name="SpawnTimer" type="Timer" parent="Spawner" unique_id=2081127909]
+wait_time = 0.8
+autostart = true
+
+[node name="WaveTimer" type="Timer" parent="Spawner" unique_id=972131857]
+wait_time = 4.0
+autostart = true
+
+[node name="LevelTimer" type="Timer" parent="." unique_id=949486096]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
+[node name="StopSpawnTimer" type="Timer" parent="." unique_id=1182317145]
+wait_time = 28.0
+one_shot = true
+autostart = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=2058210393]
+stream = ExtResource("5_music")
+autoplay = true
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=1386223557]
+
+[node name="Control" type="Control" parent="UILayer" unique_id=1802901020]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InventoryLabel" type="Label" parent="UILayer/Control" unique_id=378466688]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 20.0
+offset_bottom = 65.0
+grow_horizontal = 2
+theme = SubResource("Theme_label")
+text = "Items: 0 / 15"
+horizontal_alignment = 1

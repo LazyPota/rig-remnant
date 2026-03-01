@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://d2el7era10upk"]
+
+[ext_resource type="Script" uid="uid://dm53wx7tesdal" path="res://Scripts/event_card.gd" id="1_rjhv7"]
+
+[node name="EventCard" type="Control" unique_id=223405103]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rjhv7")
+
+[node name="Backdrop" type="ColorRect" parent="." unique_id=1984267108]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.5)
+
+[node name="Card" type="TextureRect" parent="." unique_id=1610212253]
+layout_mode = 0
+expand_mode = 2
+stretch_mode = 4
+
+[node name="Hitboxes" type="Control" parent="." unique_id=878599793]
+anchors_preset = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ChoiceA" type="Button" parent="Hitboxes" unique_id=552421610]
+layout_mode = 0
+focus_mode = 0
+flat = true
+
+[node name="ChoiceB" type="Button" parent="Hitboxes" unique_id=788266928]
+layout_mode = 0
+focus_mode = 0
+flat = true
+
+[node name="UpgradeButton" type="Button" parent="Hitboxes"]
+layout_mode = 0
+focus_mode = 0
+flat = true
+
+[node name="DiveButton" type="Button" parent="Hitboxes"]
+layout_mode = 0
+focus_mode = 0
+text = "Dive"
+
+
+[node name="CloseButton" type="Button" parent="." unique_id=2024856234]
+layout_mode = 0
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = 50.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 24
+text = "X"
+flat = true

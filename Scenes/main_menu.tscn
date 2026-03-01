@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bjx6pccdo7w4w"]
+
+[ext_resource type="Texture2D" uid="uid://6c05byoge6m0" path="res://Assets/Visual/UI/IMG_2474.PNG" id="1_tbmy8"]
+[ext_resource type="Script" uid="uid://cmuuealxri7yh" path="res://Scripts/main_menu.gd" id="1_trj04"]
+[ext_resource type="Texture2D" uid="uid://d3bysy42w5up8" path="res://Assets/Visual/UI/judul 2.png" id="2_jk1qb"]
+[ext_resource type="Texture2D" uid="uid://bpb4b7jxik386" path="res://Assets/Visual/UI/image_2025-09-13_203231171-removebg-preview.png" id="3_5dd4i"]
+[ext_resource type="Texture2D" uid="uid://cm8ymps3w8t2e" path="res://Assets/Visual/UI/image_2025-09-13_204449826-removebg-preview.png" id="4_lgwnu"]
+[ext_resource type="Texture2D" uid="uid://88c33vn0fdnv" path="res://Assets/Visual/UI/settings.png" id="5_flqon"]
+[ext_resource type="Texture2D" uid="uid://ba81s7utrosfl" path="res://Assets/Visual/UI/Settings 2.png" id="6_rcqid"]
+[ext_resource type="Texture2D" uid="uid://vku8cknsxuno" path="res://Assets/Visual/UI/Quit.png" id="7_1ajci"]
+[ext_resource type="Texture2D" uid="uid://q8g17ycnirnc" path="res://Assets/Visual/UI/Quit 2.png" id="8_7b55j"]
+
+[node name="MainMenu" type="Node2D" unique_id=1570621440]
+script = ExtResource("1_trj04")
+
+[node name="img2474" type="Sprite2D" parent="." unique_id=1605790330]
+position = Vector2(574.92395, 322.16205)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("1_tbmy8")
+
+[node name="Judul12" type="Sprite2D" parent="." unique_id=1675315330]
+position = Vector2(138.92401, 77.162)
+scale = Vector2(0.388, 0.388)
+texture = ExtResource("2_jk1qb")
+
+[node name="Control" type="Sprite2D" parent="." unique_id=1665367086]
+position = Vector2(-3.0760193, -15.837997)
+offset = Vector2(40, 40)
+
+[node name="NewGame" type="TextureButton" parent="Control" unique_id=1912733158]
+offset_left = -163.0
+offset_top = 175.0
+offset_right = 950.3334
+offset_bottom = 591.6666
+scale = Vector2(0.3, 0.3)
+pivot_offset = Vector2(190, 0)
+texture_normal = ExtResource("3_5dd4i")
+texture_pressed = ExtResource("4_lgwnu")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Continue" type="TextureButton" parent="Control" unique_id=2118503301]
+offset_left = 133.0
+offset_right = 173.0
+offset_bottom = 40.0
+pivot_offset = Vector2(0, 300)
+metadata/_edit_use_anchors_ = true
+
+[node name="Settings" type="TextureButton" parent="Control" unique_id=982745274]
+offset_left = 19.0
+offset_top = 315.0
+offset_right = 258.0
+offset_bottom = 413.0
+pivot_offset = Vector2(0, 410)
+texture_normal = ExtResource("5_flqon")
+texture_pressed = ExtResource("6_rcqid")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit" type="TextureButton" parent="Control" unique_id=255645414]
+offset_left = -27.0
+offset_top = 424.0
+offset_right = 304.0
+offset_bottom = 534.0
+pivot_offset = Vector2(0, 573)
+texture_normal = ExtResource("7_1ajci")
+texture_pressed = ExtResource("8_7b55j")
+ignore_texture_size = true
+stretch_mode = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="MusicPlayer" type="AudioStreamPlayer2D" parent="Control" unique_id=523911873]
+volume_db = -8.0
+
+[node name="SFXPlayer" type="AudioStreamPlayer2D" parent="Control" unique_id=1878081158]
+position = Vector2(0, 4)
+
+[connection signal="pressed" from="Control/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Control/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Control/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/Quit" to="." method="_on_quit_pressed"]

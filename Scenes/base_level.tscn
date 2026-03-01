@@ -1,0 +1,308 @@
+[gd_scene format=3 uid="uid://p5pg0nq4exmg"]
+
+[ext_resource type="Texture2D" uid="uid://c0jl7aqy1dlgw" path="res://Assets/Visual/Environment/asset/asset/Backgrounf/Background_Gameplay.png" id="1_5gpc1"]
+[ext_resource type="Script" uid="uid://ddi3ixsmhtnsl" path="res://Scripts/main_game.gd" id="1_w4rjs"]
+[ext_resource type="Texture2D" uid="uid://dor2hdwlfq44p" path="res://Assets/Visual/UI/image_2025-09-13_212633262-removebg-preview.png" id="2_week"]
+[ext_resource type="Texture2D" uid="uid://cf5ceyilwo7bf" path="res://Assets/Visual/UI/7b47f5bf-e1ea-4d3a-904f-c5d6c406182d_removalai_preview.png" id="3_resources"]
+[ext_resource type="Texture2D" uid="uid://cv4puidrpm2dw" path="res://Assets/Visual/UI/image_2025-09-13_224008352-removebg-preview.png" id="4_food"]
+[ext_resource type="Texture2D" uid="uid://ink3fgqma0yc" path="res://Assets/Visual/UI/image_2025-09-13_224554195-removebg-preview.png" id="5_material"]
+[ext_resource type="Texture2D" uid="uid://bsgjetlxp66vp" path="res://Assets/Visual/UI/Bar Nelayan.png" id="6_fisherman"]
+[ext_resource type="Texture2D" uid="uid://b04iafoyabmc6" path="res://Assets/Visual/UI/Group 7.png" id="7_engineer"]
+[ext_resource type="PackedScene" uid="uid://d2el7era10upk" path="res://Scenes/ui_components/event_card.tscn" id="8_event"]
+[ext_resource type="PackedScene" uid="uid://5kcrqf5t0vo6" path="res://Scenes/ui_components/fade_transition.tscn" id="9_fade"]
+[ext_resource type="Texture2D" uid="uid://crnp8mpqxg3qt" path="res://Assets/Visual/UI/Back To Main Menu.png" id="10_back"]
+[ext_resource type="Texture2D" uid="uid://0v6ktkn0lbua" path="res://Assets/Visual/UI/Back To Main Menu 2.png" id="11_back_pressed"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5s04l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_577fb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l7ey7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0f2sa"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sur3v"]
+
+[node name="BaseLevel" type="Node2D" unique_id=1231239697]
+script = ExtResource("1_w4rjs")
+
+[node name="BackgroundGameplay" type="Sprite2D" parent="." unique_id=167411236]
+position = Vector2(580, 325.99997)
+scale = Vector2(0.45429686, 0.45069438)
+texture = ExtResource("1_5gpc1")
+
+[node name="EventCard" parent="." unique_id=1609496866 instance=ExtResource("8_event")]
+visible = false
+top_level = true
+
+[node name="HopeSprite" type="Sprite2D" parent="." unique_id=2048426906]
+position = Vector2(538, 30)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_week")
+hframes = 6
+
+[node name="FoodIcon2" type="Sprite2D" parent="." unique_id=1170962946]
+position = Vector2(70, 40)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_resources")
+hframes = 5
+
+[node name="MaterialIcon" type="Sprite2D" parent="." unique_id=1600242333]
+position = Vector2(60, 100)
+scale = Vector2(0.227381, 0.220103)
+texture = ExtResource("4_food")
+
+[node name="PopulasiIcon" type="Sprite2D" parent="." unique_id=137999869]
+position = Vector2(60, 160)
+scale = Vector2(0.225926, 0.226804)
+texture = ExtResource("5_material")
+
+[node name="FishermanBar" type="Sprite2D" parent="." unique_id=1795601419]
+position = Vector2(1035, 39)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_fisherman")
+hframes = 6
+
+[node name="EngineerBar" type="Sprite2D" parent="." unique_id=100394865]
+position = Vector2(1034, 107)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_engineer")
+hframes = 6
+
+[node name="UI" type="Control" parent="." unique_id=617306127]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="WeekLabel" type="Label" parent="UI" unique_id=331786582]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 1027.0
+offset_top = 279.0
+offset_right = 1157.0
+offset_bottom = 319.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 28
+text = "Minggu 1"
+horizontal_alignment = 1
+
+[node name="FoodValue" type="Label" parent="UI" unique_id=149927435]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 24.0
+offset_right = 90.0
+offset_bottom = 52.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 20
+text = "150"
+
+[node name="MaterialValue" type="Label" parent="UI" unique_id=659526482]
+layout_mode = 0
+offset_left = 59.0
+offset_top = 86.0
+offset_right = 94.0
+offset_bottom = 114.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 20
+text = "100"
+
+[node name="ResourceLabels" type="VBoxContainer" parent="UI" unique_id=352884877]
+layout_mode = 1
+offset_left = 63.0
+offset_top = 145.0
+offset_right = 206.0
+offset_bottom = 289.0
+
+[node name="PopulationValue" type="Label" parent="UI/ResourceLabels" unique_id=774480086]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 20
+text = "20"
+
+[node name="FishermanValue" type="Label" parent="UI" unique_id=200572185]
+layout_mode = 0
+offset_left = 951.0
+offset_top = 30.0
+offset_right = 1144.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.4, 0.8, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 18
+text = "50%"
+horizontal_alignment = 1
+
+[node name="EngineerValue" type="Label" parent="UI" unique_id=1347507843]
+layout_mode = 0
+offset_left = 888.0
+offset_top = 101.0
+offset_right = 1207.0
+offset_bottom = 128.0
+theme_override_colors/font_color = Color(1, 0.6, 0.2, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 18
+text = "50%"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="StatusLabels" type="VBoxContainer" parent="UI" unique_id=1196563179]
+layout_mode = 1
+offset_left = 465.0
+offset_top = 15.0
+offset_right = 665.0
+offset_bottom = 58.0
+
+[node name="HopeValue" type="Label" parent="UI/StatusLabels" unique_id=1526300116]
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 0.4, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 22
+text = "50"
+horizontal_alignment = 1
+
+[node name="FactionLabels" type="VBoxContainer" parent="UI" unique_id=665050856]
+layout_mode = 1
+offset_left = 900.0
+offset_top = 31.0
+offset_right = 1200.0
+offset_bottom = 133.0
+
+[node name="GameButtons" type="VBoxContainer" parent="UI" unique_id=199043727]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 285.0
+offset_top = 94.0
+offset_right = 882.0
+offset_bottom = 325.0
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="EndWeekButton" type="Button" parent="UI/GameButtons" unique_id=2045565604]
+layout_mode = 2
+text = "Akhiri Minggu"
+
+[node name="MenuButton" type="TextureButton" parent="UI" unique_id=1421827606]
+layout_mode = 0
+offset_left = 946.0
+offset_top = 144.0
+offset_right = 1154.0
+offset_bottom = 232.0
+texture_normal = ExtResource("10_back")
+texture_pressed = ExtResource("11_back_pressed")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1743193660]
+volume_db = -10.0
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="." unique_id=1253932051]
+
+[node name="FadeTransition" parent="." unique_id=623341062 instance=ExtResource("9_fade")]
+
+[node name="Buildings" type="Node2D" parent="." unique_id=1818687621]
+
+[node name="Workshsop" type="Button" parent="Buildings" unique_id=678921038]
+offset_left = 868.0
+offset_top = 260.00003
+offset_right = 876.6729
+offset_bottom = 270.18988
+scale = Vector2(22.290827, 18.35155)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5s04l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_577fb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l7ey7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0f2sa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sur3v")
+
+[node name="Apartemen" type="Button" parent="Buildings" unique_id=1939179255]
+offset_left = 639.0
+offset_top = 181.00002
+offset_right = 647.9421
+offset_bottom = 191.7348
+scale = Vector2(22.290827, 18.35155)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5s04l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_577fb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l7ey7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0f2sa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sur3v")
+
+[node name="Hospital" type="Button" parent="Buildings" unique_id=1128728963]
+offset_left = 386.0
+offset_top = 228.0
+offset_right = 397.4298
+offset_bottom = 235.07806
+scale = Vector2(17.235615, 16.47967)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5s04l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_577fb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l7ey7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0f2sa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sur3v")
+
+[node name="Market" type="Button" parent="Buildings" unique_id=2098891960]
+offset_left = 76.0
+offset_top = 451.99997
+offset_right = 90.58214
+offset_bottom = 459.88474
+scale = Vector2(22.664307, 20.128965)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5s04l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_577fb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l7ey7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0f2sa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sur3v")
+
+[node name="Boat" type="Button" parent="Buildings" unique_id=560807299]
+offset_left = 1139.0
+offset_top = 532.50256
+offset_right = 1197.7896
+offset_bottom = 533.01025
+scale = Vector2(-7.3915424, 215.84898)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5s04l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_577fb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l7ey7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0f2sa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sur3v")
+
+[node name="Barak" type="Button" parent="Buildings" unique_id=237715979]
+offset_left = 207.99998
+offset_top = 286.00003
+offset_right = 215.99998
+offset_bottom = 294.00003
+scale = Vector2(22.290827, 18.35155)
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5s04l")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_577fb")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_l7ey7")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_0f2sa")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sur3v")
+
+[connection signal="pressed" from="UI/GameButtons/EndWeekButton" to="." method="_on_end_week_button_pressed"]
+[connection signal="pressed" from="UI/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="Buildings/Workshsop" to="." method="_on_bengkel_button_pressed"]
+[connection signal="pressed" from="Buildings/Apartemen" to="." method="_on_perumahan_button_pressed"]
+[connection signal="pressed" from="Buildings/Hospital" to="." method="_on_hospital_button_pressed"]
+[connection signal="pressed" from="Buildings/Market" to="." method="_on_market_button_pressed"]
+[connection signal="pressed" from="Buildings/Boat" to="." method="_on_kapal_button_pressed"]
+[connection signal="pressed" from="Buildings/Barak" to="." method="_on_barak_button_pressed"]
